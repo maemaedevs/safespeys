@@ -2,6 +2,7 @@ if (UI.requireGuest()) {
   UI.renderHeader();
 
   var form = document.getElementById("register-form");
+  UI.passwordToggles(form);
 
   form.addEventListener("submit", async function (event) {
     event.preventDefault();

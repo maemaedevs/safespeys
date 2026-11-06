@@ -2,6 +2,7 @@ if (UI.requireGuest()) {
   UI.renderHeader();
 
   var form = document.getElementById("login-form");
+  UI.passwordToggles(form);
   var WRONG = "That email and password don't match an account.";
 
   form.addEventListener("submit", async function (event) {

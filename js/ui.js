@@ -164,6 +164,38 @@ var UI = {
     return Object.keys(errors).length === 0;
   },
 
+  /** Put a show/hide eye button inside every password box in the form. */
+  passwordToggles: function (form) {
+    var svg = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
+    var eye = '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>';
+    var icons = { hidden: svg + eye + "</svg>", shown: svg + eye + '<path d="M3 3l18 18"/></svg>' };
+
+    form.querySelectorAll('input[type="password"]').forEach(function (input) {
+      var wrap = document.createElement("div");
+      wrap.className = "password-field";
+      input.parentNode.insertBefore(wrap, input);
+      wrap.appendChild(input);
+
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "password-toggle";
+      button.setAttribute("aria-label", "Show password");
+      button.setAttribute("aria-controls", input.id);
+      wrap.appendChild(button);
+
+      function show(visible) {
+        input.type = visible ? "text" : "password";
+        button.setAttribute("aria-pressed", String(visible));
+        button.innerHTML = visible ? icons.shown : icons.hidden;
+      }
+      button.addEventListener("click", function () {
+        show(input.type === "password");
+        input.focus();
+      });
+      show(false);
+    });
+  },
+
   showMessage: function (id, text, kind) {
     var box = document.getElementById(id);
     if (!box) return;
