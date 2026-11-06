@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d4434">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Privacy notice · SafeSpace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header" class="site-header on-cloth"></header>
+
+  <!-- Bracketed items are placeholders the research team must fill in before launch. -->
+  <main class="page">
+    <h1 style="border-bottom: 1px solid var(--ink); padding-bottom: 1rem">Privacy notice and informed consent</h1>
+    <p class="smallcaps faint mt-1">Version <span id="policy-version"></span></p>
+
+    <div class="notice mt-4">
+      <section>
+        <h2>Who is running this study</h2>
+        <p>
+          SafeSpace is part of an academic research study conducted by [research team names] of [institution], under the
+          supervision of [adviser]. The study was reviewed by [ethics review board, approval number]. The research team is
+          the personal information controller for this study.
+        </p>
+      </section>
+
+      <section>
+        <h2>Why we are collecting this</h2>
+        <p>
+          We want to understand the kinds of stories and dilemmas adults in the Philippines carry, how heavy they feel, and
+          how these differ by age, gender, relationship status, and occupation. Your information is used only for this
+          research and for academic publications that report combined results.
+        </p>
+      </section>
+
+      <section>
+        <h2>What we collect</h2>
+        <ul>
+          <li>Your email address and a hashed password, so you can sign in. Researchers never see your email.</li>
+          <li>Your age range, gender, relationship status, and occupation. Each has a “prefer not to say” option.</li>
+          <li>
+            The entries you write: whether it is a story or a dilemma, what it is about, a title, the text, how heavy it
+            feels, the feelings you choose, and whether you have told anyone.
+          </li>
+          <li>The date and version of the consent you gave.</li>
+        </ul>
+        <p>
+          We do not collect your name, birthdate, address, location, phone number, or device identifiers. Because your
+          entries may describe your health, relationships, or other personal matters, we treat everything you write as
+          sensitive personal information under the Data Privacy Act of 2012 (Republic Act No. 10173).
+        </p>
+      </section>
+
+      <section>
+        <h2>Who can see what</h2>
+        <ul>
+          <li>Only you can read your entries.</li>
+          <li>
+            Researchers see only totals and percentages: for example, how many entries are about family, or the age ranges
+            of participants. Any group of fewer than three people is hidden.
+          </li>
+          <li>Researchers cannot see your email, your individual answers, or the text of any entry.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Optional AI replies</h2>
+        <p>
+          If you switch them on, each entry you save is sent to Anthropic, the company that provides the Claude AI model,
+          so it can write a supportive reply. The reply is written by an AI. It is not a counselor, psychologist, or
+          psychiatrist, and it cannot give diagnoses or treatment. Anthropic processes this text under its commercial terms
+          as our service provider. Researchers see only how many replies were written and how many were flagged as a
+          possible crisis, never the replies themselves. You can switch AI replies off at any time in your account.
+        </p>
+      </section>
+
+      <section>
+        <h2>How long we keep it</h2>
+        <p>
+          We keep your information until the study ends on [end date], then delete it. Only the combined, anonymous results
+          are kept in the research paper. You can erase everything sooner at any time.
+        </p>
+      </section>
+
+      <section>
+        <h2>Your rights</h2>
+        <p>Under the Data Privacy Act you have the right to:</p>
+        <ul>
+          <li>be informed about how your data is used (this notice);</li>
+          <li>access and correct your information, which you can do on your account page;</li>
+          <li>withdraw consent and have your data erased, using “Erase my account” on your account page;</li>
+          <li>object to processing, and to file a complaint with the National Privacy Commission (privacy.gov.ph).</li>
+        </ul>
+        <p>
+          Taking part is voluntary. Withdrawing will not affect you in any way. Data already included in published,
+          combined results cannot be removed from them, but it cannot be traced back to you.
+        </p>
+      </section>
+
+      <section>
+        <h2>How we protect it</h2>
+        <p>
+          In this simple version, your account and entries are saved only in this web browser on this device. Passwords are
+          stored as salted hashes, and the researcher view is limited by design to combined statistics.
+        </p>
+      </section>
+
+      <section>
+        <h2>Risks and support</h2>
+        <p>
+          Writing about difficult experiences can bring up strong feelings. You can stop at any time. If you are in
+          distress, the NCMH Crisis Hotline is available 24/7 at 1553 or 0917 899 8727.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Questions about the study or your data: [research team email]. Data protection officer: [DPO name and email].</p>
+      </section>
+    </div>
+
+    <p class="mt-4"><a href="register.html" class="btn btn-cloth">Take part</a></p>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/options.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    UI.renderHeader(false);
+    document.getElementById("policy-version").textContent = PRIVACY_POLICY_VERSION;
+  </script>
+</body>
+</html>

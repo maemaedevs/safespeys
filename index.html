@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d4434">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A research study collecting the stories and dilemmas of Filipino adults, in their own words.">
+  <title>SafeSpace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="cover on-cloth">
+    <div class="cover-inner">
+      <p id="erased" class="cover-status" role="status" hidden>Your account and everything you wrote have been erased.</p>
+      <span class="wordmark wordmark-large">SafeSpace</span>
+      <span class="foil-rule" aria-hidden="true"></span>
+      <h1>Stories and dilemmas of Filipino adults, in their own words</h1>
+      <p class="smallcaps mt-1" style="color: var(--cloth-ink-2)">A research study</p>
+      <p class="lede">
+        We are studying what adults in the Philippines carry: the things that happened to them and the decisions they
+        are struggling with. You write privately. Researchers only ever see totals and percentages, never your words and
+        never who you are.
+      </p>
+      <div class="cta">
+        <a href="register.html" class="btn btn-foil">Take part</a>
+        <a href="login.html">I already have an account</a>
+      </div>
+      <p class="fine">Adults 18 and over · Philippines · <a href="privacy.html">Privacy notice</a></p>
+    </div>
+  </section>
+
+  <main class="landing-grid">
+    <section aria-labelledby="involves">
+      <h2 id="involves">What taking part involves</h2>
+      <ol class="steps">
+        <li>
+          <span class="num-big">1</span>
+          <div>
+            <h3>Create an account</h3>
+            <p>Just an email and a password. You confirm you are 18 or older.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num-big">2</span>
+          <div>
+            <h3>Answer four questions and give consent</h3>
+            <p>Your age range, gender, relationship status, and occupation, each with a “prefer not to say” option. You read the privacy notice and agree to take part.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num-big">3</span>
+          <div>
+            <h3>Write, whenever you need to</h3>
+            <p>Share a story about something that happened or a dilemma you are facing. Come back to add more, edit, or delete.</p>
+          </div>
+        </li>
+      </ol>
+      <p class="muted mt-3" style="max-width: 56ch">
+        You can switch on an optional, clearly labelled AI reply to each entry. You can stop at any time and erase your
+        account. Everything you wrote is deleted with it.
+      </p>
+    </section>
+
+    <section aria-labelledby="researchers-see">
+      <h2 id="researchers-see">What researchers see</h2>
+      <p class="muted mt-1" style="max-width: 52ch">
+        Only tables like this one. Any group smaller than three people is hidden, so no one can be singled out.
+      </p>
+      <table class="thesis-table mt-4">
+        <caption>
+          <b>Table 1.</b> Age range of the respondents (n = 70)
+          <span class="example">Example only. Not real data.</span>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Age range</th>
+            <th scope="col" class="num">f</th>
+            <th scope="col" class="num">%</th>
+            <th scope="col" style="width: 35%"><span class="sr-only">Share</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">18–24</th><td class="num">31</td><td class="num">44.3</td><td><span class="bar-track"><span class="bar-fill" style="width: 44.3%"></span></span></td></tr>
+          <tr><th scope="row">25–34</th><td class="num">22</td><td class="num">31.4</td><td><span class="bar-track"><span class="bar-fill" style="width: 31.4%"></span></span></td></tr>
+          <tr><th scope="row">35–44</th><td class="num">12</td><td class="num">17.1</td><td><span class="bar-track"><span class="bar-fill" style="width: 17.1%"></span></span></td></tr>
+          <tr><th scope="row">45–54</th><td class="num">5</td><td class="num">7.1</td><td><span class="bar-track"><span class="bar-fill" style="width: 7.1%"></span></span></td></tr>
+          <tr><th scope="row">55 and over</th><td class="num"><span class="suppressed">&lt;3</span></td><td class="num"><span class="suppressed">–</span></td><td><span class="bar-track"></span></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span>SafeSpace research study</span>
+      <a href="privacy.html">Privacy notice</a>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/options.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    var user = Store.currentUser();
+    if (user) UI.go(UI.homeFor(user));
+    if (UI.param("erased")) document.getElementById("erased").hidden = false;
+  </script>
+</body>
+</html>
